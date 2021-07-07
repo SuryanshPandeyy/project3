@@ -1,0 +1,337 @@
+* {
+ padding: 0;
+ margin: 0;
+ box-sizing: border-box;
+}
+
+.header {
+ width: 100%;
+ height: fit-content;
+ box-shadow: 0 .06rem .2rem 0rem rgba(145, 145, 145, 0.3);
+ padding: .7rem 0;
+}
+
+.header .header-box {
+ display: flex;
+ flex-direction: row;
+ justify-content: space-between;
+ align-items: center;
+ padding: 0 2rem;
+}
+
+.header .session button {
+ margin: 0 .5rem;
+ padding: .5rem .7rem;
+ box-shadow: 0 .07rem .1rem 0 rgba(145, 145, 145, 0.2);
+ background: white;
+ border: none;
+ outline: none;
+ border-radius: .6rem;
+ font-weight: bold;
+ cursor: pointer;
+}
+
+.header .session button.register {
+ color: white;
+ background: #ff4775;
+}
+
+.header .session .text {
+ font-size: .9rem;
+ font-weight: bold;
+ margin: 0 .6rem;
+}
+
+.box {
+ width: 100%;
+}
+
+.inner-box {
+ display: flex;
+ flex-direction: row;
+ justify-content: space-between;
+ padding: 1rem 3rem;
+}
+
+.inner-box>.text>div:first-child {
+ font-size: 4.5vw;
+ margin-bottom: 3vw;
+ width: 35vw;
+}
+
+.inner-box .icon-box .text {
+ font-size: 1rem;
+}
+
+.inner-box .button button,
+.second-block button,
+.third-block button {
+ padding: .4rem 1rem;
+ margin: 2rem 0;
+ background: #ff0062fd;
+ border: none;
+ outline: none;
+ color: white;
+ font-size: 1rem;
+ filter: contrast(20);
+ border-radius: .5rem;
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ cursor: pointer;
+}
+
+.inner-box .button i,
+.second-block button i,
+.third-block i {
+ margin-left: .5rem;
+}
+
+.inner-box .images {
+ display: flex;
+ align-items: center;
+}
+
+.inner-box .images div {
+ width: 30px;
+ aspect-ratio: 1/1;
+ border-radius: 50%;
+ margin: 0 -.35rem;
+ background: rgb(255, 255, 255);
+ box-shadow: .01rem .01rem .2rem 0 black;
+}
+
+.inner-box .images span {
+ margin: 0 .8rem;
+}
+
+.icon-box .icons {
+ margin-top: 1rem;
+ display: grid;
+ grid-template-columns: 5rem 5rem 5rem;
+ grid-template-rows: 4rem 4rem 4rem;
+ justify-content: center;
+ align-items: center;
+ place-items: center;
+ place-content: center;
+ grid-gap: 2rem 0;
+}
+
+.icon-box .icons .icon {
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+}
+
+.icon-box .icons .icon-set {
+ width: 50px;
+ border-radius: 50%;
+ aspect-ratio: 1/1;
+ box-shadow: .01rem .01rem .2rem 0 black;
+ justify-self: center;
+}
+
+.second-block,
+.third-block {
+ display: flex;
+ justify-content: center;
+ margin-top: 2rem;
+ flex-direction: column;
+ text-align: center;
+}
+
+.second-block .blocks ol {
+ display: flex;
+ align-items: center;
+ justify-content: space-around;
+ margin-top: 1.5rem;
+}
+
+.second-block .blocks ol li {
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ text-align: center;
+ width: 13rem;
+}
+
+.second-block .blocks ol li::before {
+ content: attr(data-text);
+ font-weight: bold;
+ font-size:1.4rem ;
+ width: 5rem;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ aspect-ratio: 1/1;
+ color: white;
+ border-radius: 50%;
+ margin: .5rem 0;
+}
+
+.second-block .blocks ol li:nth-child(odd)::before {
+ background-color: rgb(238, 49, 80);
+}
+
+.second-block .blocks ol li:nth-child(even)::before {
+ background-color: skyblue;
+}
+
+.third-block .blocks {
+ display: flex;
+ flex-direction: row;
+ justify-content: space-around;
+ align-items: center;
+
+}
+
+.third-block .blocks .card {
+ margin: 1rem;
+ width: 15rem;
+ min-height: 370px;
+ max-height: 370px;
+ box-shadow: .1rem .1rem 1rem 0 rgba(154, 154, 154, 0.5);
+ border-radius: .4rem;
+}
+
+.third-block .blocks .card .image {
+ height: 10rem;
+ box-shadow: .1rem .1rem 1rem 0 rgba(185, 185, 185, 0.227);
+ margin: 1rem;
+}
+
+.third-block .blocks .card .card-text {
+ margin: 1rem 0;
+ font-size: 1.5rem;
+}
+
+.third-block .blocks .card .card-para {
+ margin: 1rem;
+ font-size: .9rem;
+ color: rgb(49, 49, 49);
+}
+
+@media only screen and (min-width:654px) {
+ .third-block .blocks .card {
+  min-height: 320px;
+ }
+}
+
+.forth-block {
+ text-align: center;
+ overflow: hidden;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+}
+
+.forth-block .box {
+ width: 50rem;
+ min-width: 10vw;
+ align-items: center;
+ justify-content: center;
+ height: 15rem;
+ position: relative;
+ display: flex;
+ margin-top: 1.5rem;
+}
+
+.forth-block .box .cards {
+ margin: 0 .5rem;
+ width: 10rem;
+}
+
+.forth-block .box .cards .image {
+ height: 9rem;
+ box-shadow: .1rem .1rem 1rem 0 rgba(185, 185, 185, 0.3);
+ border: 1px solid grey;
+ border-radius: .7rem;
+}
+
+.forth-block .box .cards .content {
+ display: flex;
+ flex-direction: column;
+ justify-content: space-around;
+ align-items: center;
+ box-shadow: .1rem .1rem 1rem 0 rgb(180, 180, 180);
+ height: 4rem;
+ position: relative;
+ top: -15px;
+ background: white;
+ border-radius: .7rem;
+ padding: .3rem;
+}
+
+.forth-block .box .cards .content-text {
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+}
+
+.forth-block .box .cards .content .icon {
+ width: 2rem;
+ aspect-ratio: 1/1;
+ border: 1px solid black;
+ border-radius: 50%;
+ margin: 0 .4rem;
+}
+
+.forth-block .box .cards .content {
+ font-size: .9rem;
+}
+
+.forth-block .box .cards .content p{
+ font-size: .7rem;
+}
+
+.forth-block .arrow , .fifth-block .arrow{
+ margin: 10px 0 50px 0;
+}
+
+.forth-block .arrow i , .fifth-block .arrow i{
+ margin: 0 .5rem;
+ background: red;
+ padding: 0.4rem .9rem;
+ border-radius: .7rem;
+ color: white;
+ filter: contrast(20);
+ cursor: pointer;
+}
+
+.fifth-block {
+ text-align: center;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ flex-direction: column;
+ overflow: hidden;
+}
+
+.fifth-block .box {
+ display: flex;
+ flex-direction: row;
+ align-items: center;
+ justify-content: center;
+ height: 200px;
+ width: 70rem;
+ min-width: 10vw;
+}
+.fifth-block  p{
+ margin-top: 10px;
+}
+
+.fifth-block .box .card {
+ display: flex;
+ flex-direction: column;
+ justify-content: space-around;
+ box-shadow: .1rem .1rem 2rem 0 rgba(108, 108, 108, 0.351);
+ border-radius: .6rem;
+ height: 150px;
+ margin: 0 1.5rem;
+ padding: 1rem;
+}
+.fifth-block .box .card .card-name{
+ font-weight: bold;
+}
